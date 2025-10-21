@@ -1,0 +1,38 @@
+# ===== General =====
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# ===== TypeScript =====
+*.tsbuildinfo
+
+# ===== Backend (Node.js / Express) =====
+backend/node_modules/
+backend/dist/
+backend/coverage/
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# ===== Frontend (React + TypeScript) =====
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+frontend/.vite/
+frontend/.next/
+frontend/.vercel/
+frontend/.turbo/
+
+# ===== Misc =====
+*.cache
+*.tmp
+*.swp
+.vscode/
+.idea/
