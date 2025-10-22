@@ -49,7 +49,7 @@ export async function deleteUser(req:Request,res:Response,next:NextFunction){
     const existing = await UserModel.findById(id);
     if(!existing) throw new NotFound("User not found");
     if((existing.friends || []).length > 0) throw new ConflictError("User still linked to friends; unlink first");
-    await existing.remove();
+    await existing.deleteOne();
     res.status(204).send();
   }catch(e){ next(e); }
 }
